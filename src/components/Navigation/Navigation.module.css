@@ -1,0 +1,15 @@
+.link.active {
+  padding: 5px;
+  background-color: cadetblue;
+  border-radius: 4px;
+  font-size: 25px;
+}
+
+.link {
+  display: inline-flex;
+  background-color: white;
+  font-size: 25px;
+}
+.link:last-child {
+  margin-left: 10px;
+}

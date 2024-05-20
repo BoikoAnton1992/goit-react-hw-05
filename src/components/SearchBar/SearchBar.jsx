@@ -1,24 +1,13 @@
-import css from './SearchBar.module.css';
-import toast, { toastConfig } from 'react-simple-toasts';
-import 'react-simple-toasts/dist/theme/dark.css';
+import css from '../SearchBar/SearchBar.module.css';
 
-toastConfig({ theme: 'dark', clickClosable: true, position: 'center' });
-
-export default function SearchBar({ onSubmit }) {
-  const handleSubmit = event => {
-    event.preventDefault();
-    const form = event.target;
-
-    if (form.elements.query.value.trim() === '') {
-      toast('Please, enter text to serch');
-    }
-    onSubmit(form.elements.query.value.trim());
-    form.reset();
-  };
-
+export default function SearchBar({ value, onSubmit }) {
   return (
     <header>
-      <form className={css.container} onSubmit={handleSubmit}>
+      <form
+        className={css.container}
+        value={value}
+        onChange={e => onSubmit(e.target.value.trim())}
+      >
         <input
           className={css.input}
           type="text"
@@ -27,7 +16,7 @@ export default function SearchBar({ onSubmit }) {
           placeholder="Search images and photos"
           name="query"
         />
-        <button className={css.button} type="submit">
+        <button className={css.btn} type="submit">
           Search
         </button>
       </form>

@@ -1,3 +1,5 @@
-export default function ErrorMessage() {
-  return <b>Oops! There was an error! Please reload!</b>;
+import css from './Error.module.css';
+
+export default function Error() {
+  return <p className={css.text}>Error...</p>;
 }

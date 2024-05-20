@@ -1,13 +1,13 @@
-.contactContainer {
-  padding: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  width: 225px;
-  border-radius: 6px;
-  border: 2px solid dimgray;
+.text {
+  font-size: 20px;
+  font-weight: 600;
+  color: orangered;
 }
 
-.btn {
-  background-color: rgb(197, 193, 193);
+.active {
+  background-color: cadetblue;
+}
+
+.link {
+  background-color: white;
 }
